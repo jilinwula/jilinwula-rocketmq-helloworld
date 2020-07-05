@@ -13,7 +13,7 @@ import java.util.List;
 public class Consomer {
     public static void main(String[] args) throws MQClientException {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("producerGroup-test");
-        consumer.setNamesrvAddr("47.95.201.47:9876");
+        consumer.setNamesrvAddr("47.95.201.37:9876");
         consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_LAST_OFFSET);
         consumer.subscribe("topic-test", "*");
         consumer.registerMessageListener(new MessageListenerConcurrently() {
